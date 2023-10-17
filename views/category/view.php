@@ -13,6 +13,10 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-view">
 
+<?php if (Yii::$app->session->hasFlash('success')): ?>
+        <?= Yii::$app->session->getFlash('error') ?>
+    <?php endif; ?>
+
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p class="text-end">

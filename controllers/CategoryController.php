@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Category;
+use app\models\Items;
 use app\models\CategorySearch;
 use Yii;
 use yii\filters\VerbFilter;
@@ -132,9 +133,15 @@ class CategoryController extends Controller
     public function actionDelete($id)
     {
         if (!Yii::$app->user->isGuest) {
-            $this->findModel($id)->delete();
 
-            return $this->redirect(['index']);
+            $items = Items::find()->where(['category_id' => $id])->all();
+            if (isset($items) && sizeof($items) > 0) {
+                Yii::$app->session->setFlash('error', "Category Cannot Be Deleted (Items Exist with this category).");
+                return $this->redirect(['view', 'id' => $id]);
+            } else {
+                $this->findModel($id)->delete();
+                return $this->redirect(['index']);
+            }
         } else {
             return $this->redirect(['/site/login']);
         }
