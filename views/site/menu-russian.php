@@ -64,7 +64,7 @@ $this->title = 'Tanggies Menu';
                         $category = Category::find()->all();
                         if($category){
                             foreach($category as $cat){
-                                echo "<a href='#cat-".$cat->id."' onclick='closeNav()'>". $cat->name ."</a>";
+                                echo "<a href='#cat-".$cat->id."' onclick='closeNav()'>". $cat->name ."(". $cat->russian_name .")</a>";
                             }
                         }
                     ?>
@@ -90,7 +90,7 @@ $this->title = 'Tanggies Menu';
                         $drinkscategory = DrinksCategory::find()->all();
                         if($category){
                             foreach($drinkscategory as $dcat){
-                                echo "<a href='#dcat-".$dcat->id."' onclick='closeNav()'>". $dcat->name ."</a>";
+                                echo "<a href='#dcat-".$dcat->id."' onclick='closeNav()'>". $dcat->name ."(". $dcat->russian_name .")</a>";
                             }
                         }
                     ?>
@@ -102,7 +102,7 @@ $this->title = 'Tanggies Menu';
                         if($category){
                             foreach($category as $cat){
                                 echo "<section id='cat-".$cat->id."'></section>";
-                                echo "<h2>". $cat->name ."</h2>";
+                                echo "<h2>". $cat->name ."(". $cat->russian_name .")</h2>";
                                 $items = Items::find()->where(["category_id" => $cat->id])->all();
                                 if($items){
                                     foreach($items as $item){
@@ -114,12 +114,15 @@ $this->title = 'Tanggies Menu';
                             <div class="name">
                                 <h3><?= $item->name ?></h3>
                             </div>
+                            <div class="name">
+                                <h3><?= $item->russian_name ?></h3>
+                            </div>
                             <!-- <div class="choice">
                                 <h3>Vegetarian / Chicken / Prawns</h3>
                             </div> -->
-                            <div class="decr">
+                            <!-- <div class="decr">
                                 <h3><?= $item->description ?></h3>
-                            </div>
+                            </div> -->
                         </div>
                     <?php
                                     }
@@ -1626,7 +1629,7 @@ $this->title = 'Tanggies Menu';
                         if($drinkscategory){
                             foreach($drinkscategory as $dcat){
                                 echo "<section id='dcat-".$dcat->id."'></section>";
-                                echo "<h2>". $dcat->name ."</h2>";
+                                echo "<h2>". $dcat->name ." (". $dcat->russian_name .")</h2>";
                                 $drinks = Drinks::find()->where(["drinks_category_id" => $dcat->id])->all();
                                 if($drinks){
                                     foreach($drinks as $drink){
@@ -1638,12 +1641,15 @@ $this->title = 'Tanggies Menu';
                             <div class="name">
                                 <h3><?= $drink->name ?></h3>
                             </div>
+                            <div class="name">
+                                <h3><?= $drink->russian_name ?></h3>
+                            </div>
                             <!-- <div class="choice">
                                 <h3>Vegetarian / Chicken / Prawns</h3>
                             </div> -->
-                            <div class="decr">
+                            <!-- <div class="decr">
                                 <h3><?= $drink->description ?></h3>
-                            </div>
+                            </div> -->
                         </div>
                     <?php
                                     }
