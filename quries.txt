@@ -1,0 +1,6 @@
+CREATE TABLE `tanggies`.`drinks_category` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `russian_name` VARCHAR(255) NULL DEFAULT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `tanggies`.`drinks` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `russian_name` VARCHAR(255) NOT NULL , `price` VARCHAR(100) NOT NULL , `drinks_category_id` INT NOT NULL , `is_available` TINYINT NOT NULL DEFAULT '1' , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+alter table drinks add CONSTRAINT FOREIGN key (drinks_category_id) REFERENCES drinks_category(id)
+ALTER TABLE `drinks` ADD `description` TEXT NOT NULL AFTER `russian_name`;
+ALTER TABLE `items` ADD `description` TEXT NULL DEFAULT NULL AFTER `name`;
+ALTER TABLE `drinks` CHANGE `description` `description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;

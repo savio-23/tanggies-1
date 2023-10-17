@@ -129,4 +129,16 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionMenu()
+    {
+        $this->layout = 'menu';
+        return $this->render('menu');
+    }
+
+    public function actionMenuRussian()
+    {
+        $this->layout = 'menu';
+        return $this->render('menu-russian');
+    }
 }

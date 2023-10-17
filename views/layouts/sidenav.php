@@ -10,9 +10,19 @@
                                 Categories
                             </a>
 
+                            <a class="nav-link" href="<?= Yii::$app->request->baseUrl.'/drinks-category' ?>">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-wine-bottle"></i></div>
+                                Drinks Categories
+                            </a>
+
                             <a class="nav-link" href="<?= Yii::$app->request->baseUrl.'/items' ?>">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-pizza-slice"></i></div>
                                 Items
+                            </a>
+
+                            <a class="nav-link" href="<?= Yii::$app->request->baseUrl.'/drinks' ?>">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-martini-glass-citrus"></i></i></div>
+                                Drinks
                             </a>
 
                             <a class="nav-link" href="<?= Yii::$app->request->baseUrl.'/users' ?>">

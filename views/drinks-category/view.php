@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\models\Items $model */
+/** @var app\models\DrinksCategory $model */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Items', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Drinks Categories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="items-view">
+<div class="drinks-category-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -28,21 +28,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-md-4">
-        <?= DetailView::widget([
-            'model' => $model,
-            'attributes' => [
-                'name',
-                'russian_name',
-                'price',
-                'description',
-                [
-                    "attribute" => "category_id",
-                    "value" => function($model){
-                        return $model->category->name;
-                    }
-                ]
-            ],
-        ]) ?>
+            <?= DetailView::widget([
+                'model' => $model,
+                'attributes' => [
+                    'name',
+                    'russian_name',
+                ],
+            ]) ?>
         </div>
     </div>
 

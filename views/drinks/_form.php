@@ -2,24 +2,22 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\DrinksCategory;
 
 /** @var yii\web\View $this */
-/** @var app\models\Items $model */
+/** @var app\models\Drinks $model */
 /** @var yii\widgets\ActiveForm $form */
-use yii\helpers\ArrayHelper;
-use app\models\Category;
+$category = ArrayHelper::map(DrinksCategory::find()->all(), 'id', 'name');
 
-$category = ArrayHelper::map(Category::find()->all(), 'id', 'name');
 ?>
 
-<div class="items-form">
-
+<div class="drinks-form">
     <div class="row">
         <div class="col-md-4">
             <?php $form = ActiveForm::begin(); ?>
 
             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
             <br>
 
             <?= $form->field($model, 'russian_name')->textInput(['maxlength' => true]) ?>
@@ -31,7 +29,8 @@ $category = ArrayHelper::map(Category::find()->all(), 'id', 'name');
             <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
             <br>
 
-            <?= $form->field($model, 'category_id')
+
+            <?= $form->field($model, 'drinks_category_id')
                 ->dropDownList(
                     $category,
                     ['prompt' => 'Select Category']
@@ -55,14 +54,3 @@ $category = ArrayHelper::map(Category::find()->all(), 'id', 'name');
     
 
 </div>
-
-<?php
-
-$script = <<< JS
-        $(document).ready(function(){
-             $('#items-category_id').select2();
-        }
-        
-    JS;
-$this->registerJs($script);
-?>

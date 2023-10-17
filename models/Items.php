@@ -35,7 +35,7 @@ class Items extends \yii\db\ActiveRecord
         return [
             [['name', 'russian_name', 'price', 'category_id'], 'required'],
             [['category_id'], 'integer'],
-            [['created_at' ,"is_available"], 'safe'],
+            [['created_at' ,"is_available","description"], 'safe'],
             [['name', 'russian_name'], 'string', 'max' => 255],
             [['price'], 'string', 'max' => 100],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::class, 'targetAttribute' => ['category_id' => 'id']],

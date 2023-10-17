@@ -1,0 +1,439 @@
+ /* Basic styling for buttons and content */
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+
+
+        .main {
+
+            overflow: hidden;
+            width: 100%;
+            background-image: rgba(2, 61, 255, 0.5);
+        }
+
+        .head {
+            position: sticky;
+            width: 100%;
+            background-image: linear-gradient(to bottom, rgb(6, 2, 255), rgb(123, 156, 247));
+            text-align: center;
+            justify-content: center;
+            position: sticky;
+            padding-top: -50px;
+            padding-bottom: -50px;
+            z-index: 4;
+
+        }
+
+        .head img {
+            width: 350px;
+            margin-top: -50px;
+            margin-bottom: -50px;
+
+        }
+
+
+        .nav {
+
+
+            position: sticky;
+
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 5;
+            background-color: rgb(140, 166, 240);
+
+        }
+
+        .btn1 Button {
+            background-color: #5494ef;
+            color: #FFF;
+            font-size: 25px;
+            padding: 10px 130px;
+            border: none;
+            cursor: pointer;
+            position: sticky;
+            border-radius: 50px;
+        }
+
+        .btn {
+            text-align: center;
+            padding: 5px;
+
+            position: sticky;
+            background-image: linear-gradient(rgba(123, 156, 247.03), rgba(47, 137, 211, 0.4));
+            height: 1000px;
+                transition: all 1s;
+
+        }
+
+        .btn1 {
+            display: inline-block;
+            padding-inline: 20px;
+            position: sticky;
+            
+
+        }
+
+
+
+        .background {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(248, 249, 250, 0.55)), url(blue.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+
+
+        .sidenav {
+            height: 100%;
+            min-height: 100vh;
+            width: 200px;
+            position: sticky;
+            z-index: 3;
+            left: 0;
+            background-image: linear-gradient(rgb(123, 156, 247), rgb(47, 137, 211));
+            top: 40px;
+            overflow-x: hidden;
+            transition: 0.5s;
+
+            top: 2em;
+            margin-left: -270px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+
+        #content {
+            padding: 0px;
+            transition: margin-left .5s;
+            z-index: 0;
+            margin-left: 250px;
+        }
+
+        
+
+        .food,.drinks {
+            display: none;
+            margin-top: -860px;
+        }
+
+        .active {
+            display: block;
+          
+        }
+
+        h2 {
+            width: 50%;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 30px;
+            padding: 0px;
+            margin-left: 10px;
+        }
+
+        .name {
+            font-family: 'Gabarito', cursive;
+            font-size: 20px;
+            width: 50%;
+        }
+
+        .price {
+            float: right;
+            position: relative;
+            text-align: center;
+        }
+
+        .choice {
+            width: 50%;
+            font-family: 'Kalam', cursive;
+            font-size: 15px;
+        }
+
+        .decr h3 {
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            width: 60%;
+            size: 0px;
+
+        }
+
+        .items {
+            padding: 25px;
+
+        }
+
+        #myBtn {
+            margin-bottom: 10px;
+            display: none;
+            position: fixed;
+
+            bottom: 30px;
+            right: 20px;
+            z-index: 9;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            padding: 15px;
+            background-color: rgb(132, 190, 238);
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding: 5em;
+        }
+
+        .btn4{
+            display: inline;
+        }
+        .btn span{
+            margin-right: auto;
+            display: none;
+        }
+        .closebtn{
+            display: none;
+        }
+
+        .sidefood :first-child{
+            display: none;
+        }
+
+        .sidedrink :first-child{
+            display: none;
+
+        }
+
+        .btn4 {
+            margin-right: auto;
+            transform: translateY(35vh);
+            transition: all 1s;
+            margin-left: auto;
+        }
+        
+                .shrunk {
+                    height: 50px; /* Adjust the height as desired */
+                }
+        
+                .shrink1 {
+                    transform: translateY(0vh) scale(0.7);
+                    
+                }
+        
+
+
+
+ /*
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+*/
+
+        @media all and (max-width:700px) {
+
+            .sidenav {
+                top: 40px;
+                width: 0px;
+            }
+            .btn span{
+                display: block;
+            }
+
+            .sidenav .closebtn {
+                position: relative;
+                top: 0;
+
+                font-size: 36px;
+                margin-left: 170px;
+                padding: 0;
+                display: block;
+
+            }
+
+
+            .food {
+                margin-top: -870px;
+                margin-left: 0px;
+            }
+
+            .drinks {
+                margin-left: 0px;
+                margin-top: -800px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #000000;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .head {
+                width: 100%;
+                background-image: linear-gradient(to bottom, rgb(6, 2, 255), rgb(123, 156, 247));
+                text-align: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            .head img {
+                margin-top: -40px;
+                margin-bottom: -50px;
+                width: 200px;
+            }
+
+            .nav {
+                background-image: linear-gradient(rgba(123, 156, 247.03), rgb(240, 245, 249));
+
+             
+                transition: all 1s;
+            }
+
+            .sidenav {
+                display: block;
+
+                background-image: linear-gradient(rgb(123, 156, 247), rgb(47, 137, 211));
+            }
+
+
+            .btn1 Button {
+                background-color: #5074f8;
+                color: #FFF;
+                font-size: 25px;
+                padding: 7px 40px;
+                border: none;
+              
+
+            }
+
+            .btn1 {
+                display: inline-block;
+                padding-inline: 0px;
+
+            }
+
+            .btn {
+                background-image: linear-gradient(rgba(123, 156, 247,0.5), rgb(255, 255, 255 ));
+
+             
+                text-align: center;
+                padding-inline: 20px;
+                display: flex;
+                height: 1000px;
+                transition: all 1s;
+                padding-bottom: 13px;
+               
+            }
+
+
+
+            .background {
+                background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(blue.png);
+                background-size: 400px;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
+
+            #content {
+                padding: 0px;
+                transition: margin-left .5s;
+                z-index: 0;
+                margin-left: 0px;
+            }
+            h2 {
+                width: 50%;
+                font-family: 'Architects Daughter', cursive;
+                font-size: 20px;
+                padding: 0px;
+            }
+
+            .name {
+                padding-left: 10px;
+                font-size: 10px;
+            }
+
+            .price {
+                float: right;
+                position: relative;
+                font-size: 10px;
+                margin-right: 0px;
+            }
+
+            .choice {
+                padding-left: 10px;
+                width: 50%;
+                font-family: 'Kalam', cursive;
+                font-size: 10px;
+            }
+
+            .decr h3 {
+                padding-left: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 10px;
+                width: 60%;
+                size: 0px;
+
+            }
+            .btn4 {
+                margin-right: auto;
+                transform: translateY(35vh);
+                transition: all 1s;
+                margin-left: auto;
+            }
+            
+                    .shrunk {
+                        height: 30px; /* Adjust the height as desired */
+                    }
+            
+                    .shrink1 {
+                        transform: translateY(0vh) scale(0.7);
+                        
+                    }
+                    .btn2 {
+                        margin-right: auto;
+                    }
+        }
+
+       
+     
