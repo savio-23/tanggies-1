@@ -25,6 +25,12 @@ $category = ArrayHelper::map(Category::find()->all(), 'id', 'name');
             <?= $form->field($model, 'russian_name')->textInput(['maxlength' => true]) ?>
             <br>
 
+            <?= $form->field($model, 'choice')->textInput(['maxlength' => true]) ?>
+            <br>
+
+            <?= $form->field($model, 'russian_choice')->textInput(['maxlength' => true]) ?>
+            <br>
+
             <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
             <br>
 

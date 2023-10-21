@@ -113,6 +113,7 @@ $this->title = 'Tanggies Menu';
                             </div>
                             <div class="name">
                                 <h3><?= $item->name ?></h3>
+                                <h3 class="choice"><?= $item->choice ?></h3>
                             </div>
                             <!-- <div class="choice">
                                 <h3>Vegetarian / Chicken / Prawns</h3>

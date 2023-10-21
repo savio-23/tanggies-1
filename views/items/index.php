@@ -28,12 +28,16 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'options' => [
+            'class' => 'table-responsive',
+        ],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'name',
             'russian_name',
             'price',
+            
             [
                 "attribute" => "is_available",
                 "value" => function($model){

@@ -140,14 +140,14 @@
 
         h2 {
             width: 50%;
-            font-family: 'Architects Daughter', cursive;
+            /* font-family: 'Architects Daughter', cursive; */
             font-size: 30px;
             padding: 0px;
             margin-left: 10px;
         }
 
         .name {
-            font-family: 'Gabarito', cursive;
+            /* font-family: 'Gabarito', cursive; */
             font-size: 20px;
             width: 50%;
         }
@@ -383,7 +383,7 @@
             }
             h2 {
                 width: 50%;
-                font-family: 'Architects Daughter', cursive;
+                /* font-family: 'Architects Daughter', cursive; */
                 font-size: 20px;
                 padding: 0px;
             }

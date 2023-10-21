@@ -34,7 +34,7 @@ class Drinks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'russian_name', 'price', 'drinks_category_id'], 'required'],
+            [['name', 'price', 'drinks_category_id'], 'required'],
             [['description'], 'string'],
             [['drinks_category_id', 'is_available'], 'integer'],
             [['created_at'], 'safe'],

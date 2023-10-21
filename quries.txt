@@ -4,3 +4,10 @@ alter table drinks add CONSTRAINT FOREIGN key (drinks_category_id) REFERENCES dr
 ALTER TABLE `drinks` ADD `description` TEXT NOT NULL AFTER `russian_name`;
 ALTER TABLE `items` ADD `description` TEXT NULL DEFAULT NULL AFTER `name`;
 ALTER TABLE `drinks` CHANGE `description` `description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+
+---oct 21---
+
+ALTER TABLE `items` CHANGE `russian_name` `russian_name` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL;
+ALTER TABLE `items` ADD `choice` VARCHAR(255) NULL AFTER `russian_name`, ADD `russian_choice` VARCHAR(255) NULL AFTER `choice`;
+
+---end---
