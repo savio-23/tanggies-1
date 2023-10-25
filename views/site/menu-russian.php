@@ -102,7 +102,7 @@ $this->title = 'Tanggies Menu';
                         if($category){
                             foreach($category as $cat){
                                 echo "<section id='cat-".$cat->id."'></section>";
-                                echo "<h2>". $cat->name ."(". $cat->russian_name .")</h2>";
+                                echo "<h2>". $cat->name ." ". $cat->russian_name ."</h2>";
                                 $items = Items::find()->where(["category_id" => $cat->id])->all();
                                 if($items){
                                     foreach($items as $item){
@@ -1631,7 +1631,7 @@ $this->title = 'Tanggies Menu';
                         if($drinkscategory){
                             foreach($drinkscategory as $dcat){
                                 echo "<section id='dcat-".$dcat->id."'></section>";
-                                echo "<h2>". $dcat->name ." (". $dcat->russian_name .")</h2>";
+                                echo "<h2>". $dcat->name ." ". $dcat->russian_name ."</h2>";
                                 $drinks = Drinks::find()->where(["drinks_category_id" => $dcat->id])->all();
                                 if($drinks){
                                     foreach($drinks as $drink){
