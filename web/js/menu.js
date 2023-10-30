@@ -43,14 +43,18 @@
         sideFoodMenu.style.display = "none";
         sideDrinkMenu.style.display = "block";
     });
-
-    openNav.classList.add('active');
+openNav.classList.add('active');
     function openNav() {
+        if (window.innerWidth < 700) {
         document.getElementById("mySidenav").style.width = "200px";
    
+        } else {
+            document.getElementById("mySidenav").style.width = "265px";
+        }
 
+    }
 
-    }
+  
 
     function closeNav() {
         // Check the screen width
